@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { HomeComponent } from './components/home/home.component';
 import { ChampionComponent } from './components/champion/champion.component';
 import { ChampionsComponent } from './components/champions/champions.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ChampionsComponent } from './components/champions/champions.component';
     HomeComponent,
     ChampionComponent,
     ChampionsComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

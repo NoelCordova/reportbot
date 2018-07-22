@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { ReportbotService } from '../../services/reportbot.service'
 
 @Component({
   selector: 'app-champions',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChampionsComponent implements OnInit {
 
-  constructor() { }
+  data = {};
+
+  constructor(private reportbot: ReportbotService, private http: HttpClient) { }
 
   ngOnInit() {
+    this.reportbot.getChampions().subscribe( response => {
+      this.data = response;
+    });
   }
 
 }

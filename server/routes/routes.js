@@ -5,9 +5,9 @@ const app = express();
 
 
 // Routes definition
-app.use(require('./api/ejemplo.api'));
+app.use(require('./api/champions.api'));
 
-// Rutas que maneja Angular
+// Angular routes
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname + '/../../dist/index.html'));
 });
