@@ -10,14 +10,14 @@ import { ReportbotService } from '../../services/reportbot.service'
 })
 export class ChampionsComponent implements OnInit {
 
-  data = {};
+  champions:any[] = [];
 
-  constructor(private reportbot: ReportbotService, private http: HttpClient) { }
-
-  ngOnInit() {
-    this.reportbot.getChampions().subscribe( response => {
-      this.data = response;
+  constructor(private reportbot: ReportbotService, private http: HttpClient) {
+    this.reportbot.getChampions().subscribe( (response:any) => {
+      this.champions = response;
     });
   }
+
+  ngOnInit() { }
 
 }
