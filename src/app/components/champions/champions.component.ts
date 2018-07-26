@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router'
 
 import { ReportbotService } from '../../services/reportbot.service'
 
@@ -12,11 +12,15 @@ export class ChampionsComponent implements OnInit {
 
   champions:any[] = [];
 
-  constructor(private reportbot: ReportbotService, private http: HttpClient) {
+  constructor(private reportbot: ReportbotService, private router: Router) { }
+
+  ngOnInit() {
     this.reportbot.getChampions()
     .subscribe( (response:any) => this.champions = response);
   }
 
-  ngOnInit() { }
+  viewChampion(champion:string) {
+    this.router.navigate(['/champion', champion]);
+  }
 
 }

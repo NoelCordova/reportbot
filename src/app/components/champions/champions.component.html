@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="card-columns">
-    <div *ngFor="let champion of champions" class="card">
+    <div *ngFor="let champion of champions" class="card" (click)="viewChampion(champion.id)">
       <img class="card-img-top" [src]="champion.img" [alt]="champion.name" height="350">
       <div class="card-body">
         <h5 class="card-title">{{ champion.name }}</h5>
@@ -42,7 +42,4 @@
     </div>
   </div>
 
-  <!-- <div>
-    {{ champions | json }}
-  </div> -->
 </div>

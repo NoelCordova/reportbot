@@ -6,6 +6,7 @@ const app = express();
 
 // Routes definition
 app.use(require('./api/champions.api'));
+app.use(require('./api/champion.api'))
 
 // Angular routes
 app.get('/*', (req, res) => {

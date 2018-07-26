@@ -12,4 +12,8 @@ export class ReportbotService {
     return this.http.get('/api/champions');
   }
 
+  getChampionInfo(id:string) {
+    return this.http.get(`/api/champion/${id}`);
+  }
+
 }
