@@ -14,7 +14,7 @@ export class ChampionComponent implements OnInit {
   id:string = '';
 
   constructor(private reportbot: ReportbotService, private activatedRoute: ActivatedRoute) {
-    this.activatedRoute.params.subscribe( params => this.id = params.id)
+    this.activatedRoute.params.subscribe( params => this.id = params.id);
   }
 
   ngOnInit() {
