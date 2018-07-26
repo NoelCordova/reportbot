@@ -31,40 +31,30 @@ app.get('/api/champions', (req, res) => {
     .then( response => {
 
       let champions = [];
-      let keys = Object.keys(response.data.data)
+      let keys = Object.keys(response.data.data);
 
       for (key of keys) {
-        
-        // champions.push(key);
 
-        // console.log('data: ', key)
-
-        // champions.push({
-        //   id: response.data.data.key.id,
-        //   name: `response.data.data.${key}.name`
-        // })
-        //   img: `${imgUrl}/${response.data.data.Aatrox.id}_0.jpg`,
-        //   info: {
-        //     attack: response.data.data.Aatrox.info.attack,
-        //     defense: response.data.data.Aatrox.info.defense,
-        //     magic: response.data.data.Aatrox.info.magic,
-        //     difficulty: response.data.data.Aatrox.info.difficulty 
-        //   },
-        //   tags: [
-        //     response.data.data.Aatrox.tags[0],
-        //     response.data.data.Aatrox.tags[1]
-        //   ]
-        // });
+        champions.push({
+          id: response.data.data[key].id,
+          name: response.data.data[key].name,
+          img: `${imgUrl}/${response.data.data[key].id}_0.jpg`,
+          info: {
+            attack: response.data.data[key].info.attack,
+            defense: response.data.data[key].info.defense,
+            magic: response.data.data[key].info.magic,
+            difficulty: response.data.data[key].info.difficulty 
+          },  
+          tags: [
+            response.data.data[key].tags[0],
+            response.data.data[key].tags[1]
+          ]
+        });        
 
       }
 
-      console.log(champions);
-
-      // res.status(200).json(pro[1]);
-      // res.status(200).json(response.data.data.Aatrox)
       res.status(200).json(champions);
-      // res.status(200).json(response.data.data)
-      
+
     })
     .catch( error => handleError(res, error, 'Error en campeones' ));
 

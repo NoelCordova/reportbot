@@ -19,3 +19,7 @@
     column-count: 5;
   }
 }
+
+.badge-pill {
+  margin-right: 5px;
+}

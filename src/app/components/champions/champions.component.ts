@@ -13,9 +13,8 @@ export class ChampionsComponent implements OnInit {
   champions:any[] = [];
 
   constructor(private reportbot: ReportbotService, private http: HttpClient) {
-    this.reportbot.getChampions().subscribe( (response:any) => {
-      this.champions = response;
-    });
+    this.reportbot.getChampions()
+    .subscribe( (response:any) => this.champions = response);
   }
 
   ngOnInit() { }
