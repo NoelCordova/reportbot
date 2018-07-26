@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ChampionComponent } from './components/champion/champion.component';
 import { ChampionsComponent } from './components/champions/champions.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ChampionComponent,
     ChampionsComponent,
     NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
