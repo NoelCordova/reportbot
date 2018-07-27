@@ -1,0 +1,37 @@
+.container {
+  margin-top: 20px;
+  padding-bottom: 60px;
+}
+
+/* @media (min-width: 576px) {
+  .profile-img {
+    width: 300px;
+    height: 500px;
+  }
+} */
+
+@media (min-width: 768px) {
+  .profile-img {
+    width: 250px;
+    height: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profile-img {
+    width: 300px;
+    height: 500px;
+  }
+}
+
+.name {
+  color: #313131;
+}
+
+.title {
+  color: crimson;
+}
+
+.badge-pill {
+  margin-right: 5px;
+}

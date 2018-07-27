@@ -11,12 +11,18 @@ import { ReportbotService } from '../../services/reportbot.service'
 export class ChampionsComponent implements OnInit {
 
   champions:any[] = [];
+  loading:boolean;
 
   constructor(private reportbot: ReportbotService, private router: Router) { }
 
   ngOnInit() {
+    this.loading = true;
+
     this.reportbot.getChampions()
-    .subscribe( (response:any) => this.champions = response);
+    .subscribe( (response:any) => {
+      this.champions = response
+      this.loading = false;
+    });
   }
 
   viewChampion(champion:string) {

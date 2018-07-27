@@ -12,14 +12,20 @@ export class ChampionComponent implements OnInit {
 
   champion:any = {};
   id:string = '';
+  loading:boolean;
 
   constructor(private reportbot: ReportbotService, private activatedRoute: ActivatedRoute) {
     this.activatedRoute.params.subscribe( params => this.id = params.id);
   }
 
   ngOnInit() {
+    this.loading = true;
+
     this.reportbot.getChampionInfo(this.id)
-    .subscribe( (response:any) => this.champion = response );
+    .subscribe( (response:any) => {
+      this.champion = response
+      this.loading = false;
+    });
   }
 
 }

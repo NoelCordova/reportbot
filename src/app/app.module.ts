@@ -13,6 +13,7 @@ import { ChampionComponent } from './components/champion/champion.component';
 import { ChampionsComponent } from './components/champions/champions.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ChampionsComponent,
     NavbarComponent,
     FooterComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,

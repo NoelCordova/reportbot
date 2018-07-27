@@ -1,5 +1,7 @@
-<div class="container">
+<app-loading *ngIf="loading"></app-loading>
 
+<div *ngIf="!loading" class="container">
+  
   <div class="card-columns">
     <div *ngFor="let champion of champions" class="card" (click)="viewChampion(champion.id)">
       <img class="card-img-top" [src]="champion.img" [alt]="champion.name" height="350">
