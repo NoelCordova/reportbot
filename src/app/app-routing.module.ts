@@ -7,8 +7,8 @@ import { ChampionComponent } from './components/champion/champion.component';
 import { ChampionsComponent } from './components/champions/champions.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
+  { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: 'champion/:id', component: ChampionComponent },
   { path: 'champions', component: ChampionsComponent },
   { path: '**', component: PageNotFoundComponent }
