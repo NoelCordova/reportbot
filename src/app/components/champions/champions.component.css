@@ -2,6 +2,22 @@
   margin-top: 20px;
 }
 
+/* Cards */
+.card-body {
+  position: absolute;
+  color: white;
+  bottom: 1px;
+  background-color: black;
+  width: 100%;
+  padding: 30px;
+  opacity: 0.7;
+}
+
+.badge-pill {
+  margin-right: 5px;
+}
+
+/* Columns */
 @media (min-width: 576px) {
   .card-columns {
     column-count: 1;
@@ -20,6 +36,3 @@
   }
 }
 
-.badge-pill {
-  margin-right: 5px;
-}

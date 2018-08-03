@@ -14,6 +14,7 @@ import { ChampionsComponent } from './components/champions/champions.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { SummonerSearchComponent } from './components/summoner-search/summoner-search.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     NavbarComponent,
     FooterComponent,
     LoadingComponent,
+    SummonerSearchComponent,
   ],
   imports: [
     BrowserModule,

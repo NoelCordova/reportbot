@@ -4,42 +4,10 @@
   
   <div class="card-columns">
     <div *ngFor="let champion of champions" class="card" (click)="viewChampion(champion.id)">
-      <img class="card-img-top" [src]="champion.img" [alt]="champion.name" height="350">
+      <img class="card-img" [src]="champion.img" [alt]="champion.name" height="350">
+
       <div class="card-body">
-        <h5 class="card-title">{{ champion.name }}</h5>
-
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Attack: {{ champion.info.attack }}</li>
-          <li class="list-group-item">Defense: {{ champion.info.defense }}</li>
-          <li class="list-group-item">Magic: {{ champion.info.magic }}</li>
-          <li class="list-group-item">Difficulty: {{ champion.info.difficulty }}</li>
-        </ul>
-
-        <br>
-
-        <ng-container *ngFor="let tag of champion.tags">
-          <span *ngIf="tag == 'Fighter'" class="badge badge-pill badge-secondary">
-            {{ tag }}
-          </span>
-          <span *ngIf="tag == 'Tank'" class="badge badge-pill badge-success">
-            {{ tag }}
-          </span>
-          <span *ngIf="tag == 'Assassin'" class="badge badge-pill badge-danger">
-            {{ tag }}
-          </span>
-          <span *ngIf="tag == 'Mage'" class="badge badge-pill badge-info">
-            {{ tag }}
-          </span>
-          <span *ngIf="tag == 'Support'" class="badge badge-pill badge-warning">
-            {{ tag }}
-          </span>
-          <span *ngIf="tag == 'Marksman'" class="badge badge-pill badge-light">
-            {{ tag }}
-          </span>
-
-          <span *ngIf="tag == null" class="badge badge-pill badge-primary"></span>
-        </ng-container>
-
+        <h5 class="card-title text-center">{{ champion.name }}</h5>
       </div>
     </div>
   </div>
