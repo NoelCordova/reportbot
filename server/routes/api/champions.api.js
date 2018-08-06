@@ -4,8 +4,8 @@ const axios = require('axios');
 const app = express();
 
 
-const url = 'http://ddragon.leagueoflegends.com';
-const imgUrl = 'http://ddragon.leagueoflegends.com/cdn/img/champion/loading';
+const url = 'https://ddragon.leagueoflegends.com';
+const imgUrl = 'https://ddragon.leagueoflegends.com/cdn/img/champion/loading';
 
 const handleError = (res, reason, message, code) => {
   console.error("ERROR:" + reason);
